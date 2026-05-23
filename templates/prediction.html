@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🚗 Predicted Price</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="animated-bg">
+
+<div class="container">
+
+    <h1 style="color: #801010; font-weight: 700; text-shadow: 2px 2px 12px rgba(0,0,0,0.5);">
+        🚗 Your Predicted Price
+    </h1>
+
+    <div class="result-card">
+        <p style="font-size: 32px; font-weight: 700; color: #b43737; text-shadow: 1px 1px 8px rgba(0,0,0,0.3);">
+            ₹ {{ "%.2f"|format(predicted_price) }} Lakhs
+        </p>
+    </div>
+
+    <a href="/" class="predict-btn" style="margin-top: 20px; display: inline-block;">
+        ← Back to Input
+    </a>
+
+</div>
+
+</body>
+</html>
